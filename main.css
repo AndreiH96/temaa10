@@ -1,0 +1,125 @@
+:root{
+    --bg-color:linear-gradient(45deg, black , white);
+    --bg1-color:linear-gradient(45deg, red , white);
+}
+
+
+.ex1{
+    margin: 100px 100px;
+    border: 30px solid black;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border-bottom: 30px solid red;
+    animation: spiner 2s linear infinite;
+}
+
+@keyframes spiner {
+
+    0%{
+        transform: rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.ex2 {
+    margin: 100px 100px;
+    border: 2px solid black;
+    width: 500px;
+    height: 500px;
+    background-image: var(--bg-color);
+    background-size: 300%;
+    animation: bg 2s infinite alternate;
+
+}
+
+
+@keyframes  bg {
+    0% {
+        background-position:left;
+    }
+    100% {
+        background-position:right;
+    }
+}
+
+
+.ex3 {
+    display: grid;
+    place-items: center;
+    border: 2px solid black;
+   
+}
+
+.ex3 h1 {
+    background-image: var(--bg1-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: bg1 2s infinite alternate;
+    background-size: 200%;
+    
+
+}
+
+@keyframes  bg1 {
+    0% {
+        background-position:left;
+    }
+    100% {
+        background-position:right;
+    }
+}
+
+@media (min-width:1024px) {
+    
+    .ex3 h1{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:1023px) and (min-width: 481px) {
+    
+    .ex3 h1{
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width:480px) {
+    
+    .ex3 h1{
+        font-size: 1rem;
+    }
+}
+
+
+
+.ex4{
+    display: flex;
+ 
+    margin-top: 100px;
+}
+
+.topRight {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    box-shadow: 10px -10px 10px black;
+}
+
+.bottomLeft {
+    margin-left: 200px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    box-shadow: -10px 10px 10px black;
+}
+
+
